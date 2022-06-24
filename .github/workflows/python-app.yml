@@ -43,10 +43,10 @@ jobs:
         export PYTHONPATH=src
         pytest
     - name: Build and push Docker Image
-      uses: mr-smithers-excellent/docker-build-push@v4
+      uses: docker/build-push-action@v1
       with: 
-        image: ahmedtarek1325/test
-        registery: docker.io 
         username: ${{secrets.Docker_username}}
         password: ${{secrets.Docker_pssword}}
+        repo: ahmedtarek1325/test
+        tag: ourimage1
     
