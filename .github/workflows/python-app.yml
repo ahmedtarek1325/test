@@ -42,10 +42,10 @@ jobs:
       run: |
         export PYTHONPATH=src
         pytest
-    - name: Build and push Docker Image
-      uses: docker/build-push-action@v2
+    
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
       with: 
         username: ${{secrets.Docker_username}}
         password: ${{secrets.Docker_pssword}}
         repository: ahmedtarek1325/test
-    
