@@ -45,7 +45,7 @@ jobs:
     - name: Build and push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with: 
-        image: ahmedtarek1325/Pac-Man-multiAgent
+        image: ahmedtarek1325/test
         registery: docker.io 
         username: ${{secrets.Docker_username}}
         password: ${{secrets.Docker_pssword}}
